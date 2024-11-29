@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Template</title>
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Glyphicon Icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap3-glyphicons/1.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
+  <style>
+    /* Custom Styles */
+    body {
+      background-color: #f8f9fa;
+    }
+
+    .navbar {
+      background-color: #007bff;
+      color: white;
+    }
+
+    .navbar .nav-link {
+      color: white;
+    }
+
+    .sidebar {
+      background-color: #007bff;
+      color: white;
+      min-height: 100vh;
+      width: 250px;
+      transition: width 0.3s;
+    }
+
+    .sidebar.collapsed {
+      width: 0;
+    }
+
+    .sidebar a {
+      color: white;
+      display: block;
+      padding: 10px;
+    }
+
+    .content {
+      padding-left: 250px;
+      transition: padding-left 0.3s;
+    }
+
+    .collapsed + .content {
+      padding-left: 0;
+    }
+
+    /* Responsive Sidebar */
+    @media (max-width: 768px) {
+      .sidebar {
+        position: absolute;
+        z-index: 1000;
+      }
+
+      .content {
+        padding-left: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand" href="#">Admin Panel</a>
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <span class="glyphicon glyphicon-user"></span> User
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">Profile</a></li>
+              <li><a class="dropdown-item" href="#">Settings</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Logout</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Sidebar -->
+  <div class="sidebar" id="sidebar">
+    <a href="#" class="d-block text-white"><span class="glyphicon glyphicon-dashboard"></span> Dashboard</a>
+    <a href="#" class="d-block text-white"><span class="glyphicon glyphicon-folder-open"></span> Projects</a>
+    <a href="#" class="d-block text-white"><span class="glyphicon glyphicon-stats"></span> Reports</a>
+    <a href="#" class="d-block text-white"><span class="glyphicon glyphicon-cog"></span> Settings</a>
+  </div>
+
+  <!-- Content -->
+  <div class="content" id="content">
+    <div class="container-fluid mt-4">
+      <button class="btn btn-primary d-block d-lg-none mb-3" id="sidebarToggle">
+        <span class="glyphicon glyphicon-menu-hamburger"></span> Toggle Sidebar
+      </button>
+      <h1>Welcome to the Admin Dashboard</h1>
+      <p>This is a sample admin layout using Bootstrap 5 with a blue and white color theme.</p>
+    </div>
+  </div>
+
+  <!-- Bootstrap 5 JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Sidebar toggle logic
+    const sidebar = document.getElementById('sidebar');
+    const content = document.getElementById('content');
+    const sidebarToggle = document.getElementById('sidebarToggle');
+
+    sidebarToggle.addEventListener('click', function () {
+      sidebar.classList.toggle('collapsed');
+      content.classList.toggle('collapsed');
+    });
+  </script>
+</body>
+</html>

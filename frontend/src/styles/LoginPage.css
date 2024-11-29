@@ -1,0 +1,133 @@
+/* styles/LoginPage.css */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+  }
+  
+  .login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .login-box {
+    background-color: #fff;
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 300px;
+  }
+  
+  h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+  }
+  
+  h2 strong {
+    color: #007bff;
+  }
+  
+  p {
+    margin-bottom: 20px;
+    color: #666;
+  }
+  
+  .input-group {
+    position: relative;
+    margin-bottom: 15px;
+  }
+  
+  .form-input {
+    width: 100%;
+    padding: 10px;
+    padding-right: 1px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+  }
+  
+  .input-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #aaa;
+  }
+  
+  .checkbox-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 14px;
+  }
+  
+  .checkbox-container input {
+    margin-right: 5px;
+  }
+  
+  .btn-sign-in {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  
+  .btn-sign-in:hover {
+    background-color: #0056b3;
+  }
+  
+  .or-divider {
+    margin-bottom: 15px;
+    color: #aaa;
+  }
+  
+  .social-login button {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .btn-facebook {
+    background-color: #3b5998;
+    color: white;
+  }
+  
+  .btn-facebook:hover {
+    background-color: #2d4373;
+  }
+  
+  .btn-google {
+    background-color: #dd4b39;
+    color: white;
+  }
+  
+  .btn-google:hover {
+    background-color: #c23321;
+  }
+  
+  .links {
+    margin-top: 20px;
+    font-size: 14px;
+  }
+  
+  .links a {
+    color: #007bff;
+    display: block;
+    text-decoration: none;
+    margin-bottom: 5px;
+  }
+  
+  .links a:hover {
+    text-decoration: underline;
+  }
+  
